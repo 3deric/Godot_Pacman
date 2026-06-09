@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cngjbeeahuqgu"]
+
+[ext_resource type="Texture2D" uid="uid://cxdbq70enb0gd" path="res://icon.svg" id="1_c2sv1"]
+[ext_resource type="Script" uid="uid://dwmgp37t28j8d" path="res://Scripts/AStarGrid2DAgent.gd" id="1_tdl44"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fr3la"]
+radius = 32.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_tdl44")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fr3la")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.484375, 0.484375)
+texture = ExtResource("1_c2sv1")
