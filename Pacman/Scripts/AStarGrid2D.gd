@@ -1,3 +1,4 @@
+class_name AStarGrid
 extends Node2D
 
 var astar_grid : AStarGrid2D = AStarGrid2D.new()
@@ -29,3 +30,9 @@ func is_point_movable(position : Vector2i) -> bool:
 	
 func get_movement_path(from : Vector2i, to: Vector2i) -> Array[Vector2i]:
 	return astar_grid.get_id_path(from,to).slice(1)
+
+func set_point_occupied(position : Vector2i) -> void:
+	astar_grid.set_point_solid(position, true)
+	
+func set_point_empty(position : Vector2i) -> void:
+	astar_grid.set_point_solid(position, false)
